@@ -11,7 +11,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Databases", "Databases", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XtraSpurt.MultiDbSupport.SqlServer", "XtraSpurt.MultiDbSupport.SqlServer\XtraSpurt.MultiDbSupport.SqlServer.csproj", "{B031386D-DBEA-4790-8FED-11BEDC2CD27D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XtraSpurt.MultiDbSupport.Commons", "XtraSpurt.MultiDbSupport.Commons\XtraSpurt.MultiDbSupport.Commons.csproj", "{3426DDE4-B90A-4162-8C16-915F8AF1B57F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XtraSpurt.MultiDbSupport.Commons", "XtraSpurt.MultiDbSupport.Commons\XtraSpurt.MultiDbSupport.Commons.csproj", "{3426DDE4-B90A-4162-8C16-915F8AF1B57F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dockers", "Dockers", "{7158631A-976B-4A79-8515-BEFF8C03F438}"
+	ProjectSection(SolutionItems) = preProject
+		sqlserver-docker-compose.yml = sqlserver-docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
