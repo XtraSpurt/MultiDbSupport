@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XtraSpurt.MultiDbSupport.Web", "XtraSpurt.MultiDbSupport\XtraSpurt.MultiDbSupport.Web.csproj", "{3E918796-08AC-4CFD-A929-717C68484A60}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XtraSpurt.MultiDbSupport.Web", "XtraSpurt.MultiDbSupport.Web\XtraSpurt.MultiDbSupport.Web.csproj", "{3E918796-08AC-4CFD-A929-717C68484A60}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XtraSpurt.MultiDbSupport.Domains", "XtraSpurt.MultiDbSupport.Domains\XtraSpurt.MultiDbSupport.Domains.csproj", "{0EE01091-B075-4564-875C-AFC3FC0216D6}"
 EndProject
