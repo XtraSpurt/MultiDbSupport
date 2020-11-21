@@ -11,7 +11,10 @@ namespace XtraSpurt.MultiDbSupport.Domains
 {
     public class XtraSpurtDbContext : IdentityDbContext<XtraSpurtUser, XtraSpurtRole, Guid>
     {
-
+        public XtraSpurtDbContext(DbContextOptions<XtraSpurtDbContext> options)
+            : base(options)
+        {
+        }
         public DbSet<Post> Posts { get; set; }
 
         public DbSet<Blog> Blogs { get; set; }
