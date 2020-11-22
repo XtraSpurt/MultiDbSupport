@@ -11,10 +11,14 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\XtraSpurt.MultiDbSupport.Domains\XtraSpurt.MultiDbSupport.Domains.csproj" />
+    <ProjectReference Include="..\XtraSpurt.MultiDbSupport.MariaDb\XtraSpurt.MultiDbSupport.MariaDb.csproj" />
+    <ProjectReference Include="..\XtraSpurt.MultiDbSupport.MySql\XtraSpurt.MultiDbSupport.MySql.csproj" />
+    <ProjectReference Include="..\XtraSpurt.MultiDbSupport.PgSql\XtraSpurt.MultiDbSupport.PgSql.csproj" />
+    <ProjectReference Include="..\XtraSpurt.MultiDbSupport.SqlServer\XtraSpurt.MultiDbSupport.SqlServer.csproj" />
   </ItemGroup>
 
 </Project>

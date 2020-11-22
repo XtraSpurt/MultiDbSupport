@@ -15,8 +15,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XtraSpurt.MultiDbSupport.Co
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dockers", "Dockers", "{7158631A-976B-4A79-8515-BEFF8C03F438}"
 	ProjectSection(SolutionItems) = preProject
-		sqlserver-docker-compose.yml = sqlserver-docker-compose.yml
+		docker-compose.yml = docker-compose.yml
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XtraSpurt.MultiDbSupport.PgSql", "XtraSpurt.MultiDbSupport.PgSql\XtraSpurt.MultiDbSupport.PgSql.csproj", "{C6F6E37D-F5DE-43A2-A18F-EB32ADE24D6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XtraSpurt.MultiDbSupport.MariaDb", "XtraSpurt.MultiDbSupport.MariaDb\XtraSpurt.MultiDbSupport.MariaDb.csproj", "{C73E1C31-8B60-4FBF-BBE2-39BA19E86319}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XtraSpurt.MultiDbSupport.MySql", "XtraSpurt.MultiDbSupport.MySql\XtraSpurt.MultiDbSupport.MySql.csproj", "{CE6A68BE-6FDD-4B48-AF2E-0B453B6B60AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,12 +46,27 @@ Global
 		{3426DDE4-B90A-4162-8C16-915F8AF1B57F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3426DDE4-B90A-4162-8C16-915F8AF1B57F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3426DDE4-B90A-4162-8C16-915F8AF1B57F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6F6E37D-F5DE-43A2-A18F-EB32ADE24D6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6F6E37D-F5DE-43A2-A18F-EB32ADE24D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6F6E37D-F5DE-43A2-A18F-EB32ADE24D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6F6E37D-F5DE-43A2-A18F-EB32ADE24D6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C73E1C31-8B60-4FBF-BBE2-39BA19E86319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C73E1C31-8B60-4FBF-BBE2-39BA19E86319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C73E1C31-8B60-4FBF-BBE2-39BA19E86319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C73E1C31-8B60-4FBF-BBE2-39BA19E86319}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE6A68BE-6FDD-4B48-AF2E-0B453B6B60AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE6A68BE-6FDD-4B48-AF2E-0B453B6B60AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE6A68BE-6FDD-4B48-AF2E-0B453B6B60AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE6A68BE-6FDD-4B48-AF2E-0B453B6B60AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B031386D-DBEA-4790-8FED-11BEDC2CD27D} = {28241850-E413-4E9F-975C-420B238946C0}
+		{C6F6E37D-F5DE-43A2-A18F-EB32ADE24D6C} = {28241850-E413-4E9F-975C-420B238946C0}
+		{C73E1C31-8B60-4FBF-BBE2-39BA19E86319} = {28241850-E413-4E9F-975C-420B238946C0}
+		{CE6A68BE-6FDD-4B48-AF2E-0B453B6B60AB} = {28241850-E413-4E9F-975C-420B238946C0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B77DBCD4-0731-4DD7-83A3-344BD932AC3C}

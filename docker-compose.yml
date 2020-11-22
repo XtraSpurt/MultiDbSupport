@@ -68,9 +68,9 @@ services:
     image: phpmyadmin/phpmyadmin
     container_name: phpadmin_mysql_container
     links:
-      - mariadb
+      - mysql
     environment:
-      PMA_HOST: mariadb
+      PMA_HOST: mysql
       PMA_PORT: 3306
       PMA_ARBITRARY: 1
     restart: always
@@ -79,6 +79,8 @@ services:
         ipv4_address: 172.28.1.5
     ports:
       - 8184:80
+
+
   postgres:
     container_name: postgres_container
     image: postgres

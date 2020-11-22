@@ -22,6 +22,8 @@ namespace XtraSpurt.MultiDbSupport.Domains
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.HasDefaultSchema("spurt");
             modelBuilder.Entity<XtraSpurtUser>().ToTable("xtrausers");
             modelBuilder.Entity<XtraSpurtRole>().ToTable("xtraroles");
@@ -31,7 +33,7 @@ namespace XtraSpurt.MultiDbSupport.Domains
             modelBuilder.Entity<IdentityUserToken<Guid>>().ToTable("xtrauserclaims");
             modelBuilder.Entity<IdentityUserToken<Guid>>().ToTable("xtrausertokens");
             modelBuilder.Entity<IdentityUserLogin<Guid>>().ToTable("xtrauserlogins");
-
+     
 
             modelBuilder.Entity<Post>().ToTable("xtraposts");
             modelBuilder.Entity<Blog>().ToTable("xtrablogs");
