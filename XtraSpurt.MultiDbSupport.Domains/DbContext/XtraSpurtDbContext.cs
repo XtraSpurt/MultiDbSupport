@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +15,6 @@ namespace XtraSpurt.MultiDbSupport.Domains
 
         public DbSet<Blog> Blogs { get; set; }
 
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -33,11 +28,8 @@ namespace XtraSpurt.MultiDbSupport.Domains
             modelBuilder.Entity<IdentityUserToken<Guid>>().ToTable("xtrauserclaims");
             modelBuilder.Entity<IdentityUserToken<Guid>>().ToTable("xtrausertokens");
             modelBuilder.Entity<IdentityUserLogin<Guid>>().ToTable("xtrauserlogins");
-     
-
             modelBuilder.Entity<Post>().ToTable("xtraposts");
             modelBuilder.Entity<Blog>().ToTable("xtrablogs");
-
 
         }
     }

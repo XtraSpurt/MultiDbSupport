@@ -1,21 +1,14 @@
-﻿using System;
-using System.Reflection;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+using System;
+using System.Reflection;
 using XtraSpurt.MultiDbSupport.Domains;
 
 namespace XtraSpurt.MultiDbSupport.MySql
 {
-
     public static class MultiDbSupportMySQL
     {
-
-        /// <summary>
-        /// Add Required Dependenies for Database and Identity 
-        /// </summary>
-        /// <param name="services"> IServiceCollection </param>
-        /// <param name="connectionString"> Database Connection String  </param>
         public static void RegisterMySQLDbContexts(this IServiceCollection services, string connectionString)
         {
             var migrationsAssembly = typeof(MultiDbSupportMySQL).GetTypeInfo().Assembly.GetName().Name;
@@ -36,10 +29,7 @@ namespace XtraSpurt.MultiDbSupport.MySql
                 }
 
             );
-
-
-
-
         }
     }
+
 }

@@ -11,7 +11,7 @@ namespace XtraSpurt.MultiDbSupport.MariaDb
     {
 
         /// <summary>
-        /// Add Required Dependenies for Database and Identity 
+        /// Add Required Dependenies for Database
         /// </summary>
         /// <param name="services"> IServiceCollection </param>
         /// <param name="connectionString"> Database Connection String  </param>

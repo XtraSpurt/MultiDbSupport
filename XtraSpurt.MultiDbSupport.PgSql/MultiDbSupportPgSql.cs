@@ -1,13 +1,10 @@
-﻿using System;
-using System.Reflection;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 using XtraSpurt.MultiDbSupport.Domains;
 
 namespace XtraSpurt.MultiDbSupport.PgSql
 {
-
-
     public static class MultiDbSupportPgSql
     {
         /// <summary>
@@ -25,24 +22,18 @@ namespace XtraSpurt.MultiDbSupport.PgSql
                     options.UseNpgsql(connectionString,
                         sql =>
                         {
-                            // Apply Migration 
+                            // Apply Migration
                             sql.MigrationsAssembly(migrationsAssembly);
 
                             //Split queries (see below) can now be configured as the default for
-                            //any query executed by the DbContext. 
+                            //any query executed by the DbContext.
                             //This configuration is only available for relational providers
                             sql.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery);
                         }
                     );
-
                 }
 
             );
-
-
-
-
-
         }
     }
 }
