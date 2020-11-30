@@ -15,16 +15,17 @@ namespace XtraSpurt.MultiDbSupport.Commons
 {
     public static class CommonExtensions
     {
-        public static void AddXtraSpurtDependency(this IServiceCollection services, IWebHostEnvironment environment = null)
+        public static void AddXtraSpurtDependency(this IServiceCollection services)
         {
-            Configuration = LoadConfiguration(environment) ?? LoadConfiguration();
+            var env = services.BuildServiceProvider().GetService<IWebHostEnvironment>(); 
+            var Configuration = services.BuildServiceProvider().GetService<IConfiguration>();
 
             var databaseSetting = new DatabaseSetting();
             // Bind Database setting to databasesetting variable
             Configuration.Bind("DatabaseSetting", databaseSetting);
 
             // DI : Configure DatabaseSetting Options => The options pattern uses classes to provide strongly typed access to groups of related settings
-            services.Configure<DatabaseSetting>(options => Configuration.GetSection("DatabaseSetting").Bind(options));
+            services.Configure<DatabaseSetting>(options => Configuration?.GetSection("DatabaseSetting").Bind(options));
 
             if (string.IsNullOrWhiteSpace(databaseSetting.Type) || string.IsNullOrWhiteSpace(databaseSetting.ConnectionString))
             {
@@ -67,7 +68,7 @@ namespace XtraSpurt.MultiDbSupport.Commons
                 .AddDefaultTokenProviders();
         }
 
-        private static IConfigurationRoot Configuration { get; set; }
+        //private static IConfigurationRoot Configuration { get; set; }
 
         /// <summary>
         /// Load Configuration

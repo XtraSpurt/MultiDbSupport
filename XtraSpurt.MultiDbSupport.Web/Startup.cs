@@ -29,7 +29,7 @@ namespace XtraSpurt.MultiDbSupport.Web
                     options.JsonSerializerOptions.IgnoreNullValues = true;
                     options.JsonSerializerOptions.PropertyNamingPolicy = null;
                 });
-            services.AddXtraSpurtDependency(_environment);
+            services.AddXtraSpurtDependency();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
